@@ -44,9 +44,9 @@
                     
                 <br><br><br><br><br><br>
                      
-                        <form action="checking.html">
+                        <form action="checking.php" method="post">
                         <div class="input-group">
-                             <input class="form-control input" id="mainsearch" type="text" placeholder="www.yoursite.com">
+                             <input class="form-control input" id="mainsearch" type="text" name="website" placeholder="www.yoursite.com" value="<?php echo $_POST["website"]; ?>">
                             
                                 <span class="input-group-btn">
                                     <button id="checknow" type="submit" class="btn btn-success">Check now <i class="icon-double-angle-right"></i></button>
@@ -69,8 +69,11 @@
                         <div class="tab-pane" id="aaa">
                             
                             <div class="text-center">
+                                
+
+                                <span> Checking website: <?php echo $_POST["website"]; ?> </span>
                                 <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-                                <span class="sr-only">Loading...</span>
+                                
                             </div>
 
                         </div>
@@ -94,8 +97,7 @@
 
    
 
-    
-
+ 
    
 
     <!-- Footer -->
