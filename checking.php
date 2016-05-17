@@ -94,7 +94,10 @@
                         </div>
                         <div class="tab-pane" id="ccc">
                             <p>
-                                Content of HTML5 Features
+                                <p>3a - HTML5 Canvas Drawing</p>
+                                <p>3b - LocalStorage</p>
+                                <p>3c - External Webpage</p>
+                                <p>3d - Embedded Objects (HTML5 video)</p>
                             </p>
                         </div>
                     </div>
