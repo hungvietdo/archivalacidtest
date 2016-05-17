@@ -32,6 +32,9 @@
   </div>
 </nav>
 
+ 
+
+
     <!-- Header -->
     <header>
 
@@ -43,6 +46,13 @@
                 <div class="col-lg-6 col-lg-offset-3">
                     
                 <br><br><br><br><br><br>
+
+                <?php 
+                    if ($_POST["website"] == "") 
+                        {
+                            echo "Please input a correct website.";
+                        } 
+                ?>
                      
                         <form action="checking.php" method="post">
                         <div class="input-group">
