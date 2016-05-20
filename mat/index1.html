@@ -1,0 +1,62 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>The Archival Acid Test</title>
+	<base href="http://acid.matkelly.com/" />
+<style type="text/css">
+ /* TODO: Potentially some CSS3 features that Heritrix might not provoke crawlers to fetch content by reference */
+ 
+ body {height: 150%;}
+ div#relativeImageFromCSS {background-image: url('img.png');}
+ div#absoluteImageFromCSS {background-image: url('http://thisdomain.com/img.png');}
+ div#externalImageFromCSS {background-image: url('http://anotherSite/img.png');}
+ div {width: 100px;}
+ img, canvas {width: 10px; height: 10px; margin: 0 1px 1px 0; padding: 0; display: block; float: left;}
+ 
+ iframe {padding: 0;}
+ h1 {margin-bottom: 0; padding-bottom: 0;}
+ h2, h3, h4, p {margin: 0; padding: 0; clear: both;}
+ h2 {margin-top: 1.0em;}
+ ul {margin: 0.5em auto; padding-top: 0; list-style-type: none;}
+ 
+ div {height: 10px; border: 1px solid black; padding: 1px 0 1px 1px;}
+ div#test1 {width: 55px;}
+ div#scriptParent {width: 77px;}
+ div#html5Parent {width: 22px;}
+ 
+ p#test2iHeightAssurance {margin-top: 2000px;}
+ p {margin-bottom: 1.0em;}
+ li span {font-style: italic;}
+</style>
+<script type="text/javascript" src="arrayBuffer.js"></script>
+</head>
+<body>
+
+  
+ 
+<div id="scriptParent">
+
+<script type="text/javascript">
+//Test 2c, Script inline, DOM Manipution
+document.addEventListener('DOMContentLoaded',function(){
+	var inlineScriptImage = new Image();
+	inlineScriptImage.src = "pixel.png";
+	var scriptParent = document.getElementById('scriptParent');
+	scriptParent.appendChild(inlineScriptImage);	
+});
+	
+	
+//Test 2c, Script inline, DOM Manipution
+document.addEventListener('DOMContentLoaded',function(){
+	var inlineScriptImage = new Image();
+	inlineScriptImage.src = "pixel.png";
+	var scriptParent = document.getElementById('scriptParent');
+	scriptParent.appendChild(inlineScriptImage);	
+});
+
+</script>
+</div>
+ 
+
+</body>
+</html>
