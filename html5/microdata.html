@@ -21,18 +21,25 @@
       <script type="text/javascript">
 
        document.addEventListener('DOMContentLoaded',function(){
+      
+
+//         var biography = document.getItems("name")[0];
+
+        
+
          function supports_microdata_api() {
             return !!document.getItems;
             }
          
-
+        
+        // alert(supports_microdata_api());
 
             
 
-         if (typeof supports_microdata_api() !== 'undefined')
+         if (!supports_microdata_api() )
             {
                document.getElementById("status").innerHTML = "Your browser does not support microdata in HTML5.";
-               
+
             }
             else
             {
