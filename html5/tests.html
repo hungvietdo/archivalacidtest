@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+   <head>
+      <meta charset="UTF-8">
+      <title>html5 test</title>
+   </head>
+    
+   <body>
+    <script type="text/javascript">
+         if( sessionStorage.hits ){
+            sessionStorage.hits = Number(sessionStorage.hits) +1;
+         }
+         
+         else{
+            sessionStorage.hits = 1;
+         }
+         document.write("Total Hits :" + sessionStorage.hits );
+      </script>
+   
+      <p>Refresh the page to increase number of hits.</p>
+      <p>Close the window and open it again and check the result.</p>
+    
+      <math xmlns="http://www.w3.org/1998/Math/MathML">
+        
+         <mrow>
+            <msup><mi>a</mi><mn>2</mn></msup>
+            <mo>+</mo>
+                
+            <msup><mi>b</mi><mn>2</mn></msup>
+            <mo>=</mo>
+                
+            <msup><mi>c</mi><mn>2</mn></msup>
+         </mrow>
+            
+      </math>
+
+      <video src="foo.mp4"  width="300" height="200" controls>
+   Your browser does not support the <video> element.   
+</video>
+        
+   </body>
+</html> 
