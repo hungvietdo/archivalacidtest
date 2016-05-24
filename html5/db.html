@@ -10,7 +10,7 @@
          
          db.transaction(function (tx) {
 
-            //tx.executeSql('delete  from LOGS');
+             tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, text)');
           
           //  tx.executeSql('INSERT INTO LOGS (id, log) VALUES (4, "logmsg")');
             msg = '<p>Log message created and row inserted.</p>';
