@@ -4,29 +4,35 @@
    <head>
   
       <script type="text/javascript">
-    
-         var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
-         var msg;
+
+        var db = openDatabase('mydb', '1.0', 'Test DB', 2 * 1024 * 1024);
+        var msg;
+
+        //Basic
+        document.addEventListener('DOMContentLoaded',function(){
+            document.getElementById("basic").innerHTML = "1. Passed the basic test.";
+          });
+         
       
          db.transaction(function (tx) {
 
             tx.executeSql('DROP TABLE LOGS');
             tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)');
-            tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "This browser support web database.")');
+            tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "1. This browser support web SQL.")');
            
-            msg = '<p>Log message created and row inserted.</p>';
-            document.querySelector('#status').innerHTML =  msg;
+            // msg = '<p>Log message created and row inserted.</p>';
+            // document.querySelector('#status').innerHTML =  msg;
          });
 
          db.transaction(function (tx) {
             tx.executeSql('SELECT * FROM LOGS', [], function (tx, results) {
                var len = results.rows.length, i;
-               msg = "<p>Found rows: " + len + "</p>";
-               document.querySelector('#status').innerHTML +=  msg;
+               // msg = "<p>Found rows: " + len + "</p>";
+               // document.querySelector('#status').innerHTML +=  msg;
           
                for (i = 0; i < len; i++){
-                  msg = "<p><b>" + results.rows.item(i).log + "</b></p>";
-                  document.querySelector('#status').innerHTML +=  msg;
+                  msg = results.rows.item(i).log ;
+                  document.querySelector('#status').innerHTML =  msg;
                }
             }, null);
          });
@@ -36,7 +42,29 @@
    </head>
   
    <body>
-      <div id="status" name="status">Your browser does not support web database in HTML5.</div>
+   
+      <script>
+        
+
+        
+      </script>
+      
+
+
+
+      <div>
+        <h3>Basic</h3>
+        <p id="basic" name="basic">1. Does not pass basic javascript.</p>     
+      </div>
+      
+ 
+
+      <div>
+
+        <h3>HTML5</h3>
+        <p id="status" name="status">Your browser does not support web database in HTML5.</p>
+
+      </div>
    </body>
   
 </html>
