@@ -1,0 +1,47 @@
+<html>
+   <body>
+      
+      <div itemscope>
+         <p>My name is <span itemprop="name">Zara</span>.</p>
+      </div>
+      
+      <div itemscope>
+         <p>My name is <span itemprop="name">Nuha</span>.</p>
+      </div>
+
+
+
+       <div>
+
+        <h3>HTML5</h3>
+        <p id="status" name="status"></p>
+
+      </div>
+
+      <script type="text/javascript">
+
+       document.addEventListener('DOMContentLoaded',function(){
+         function supports_microdata_api() {
+            return !!document.getItems;
+            }
+         
+
+
+            
+
+         if (typeof supports_microdata_api() !== 'undefined')
+            {
+               document.getElementById("status").innerHTML = "Your browser does not support microdata in HTML5.";
+               
+            }
+            else
+            {
+               document.getElementById("status").innerHTML = "Pass the microdata test.";
+            }
+         console.log(supports_microdata_api());
+
+         });
+      </script>
+      
+   </body>
+</html>
