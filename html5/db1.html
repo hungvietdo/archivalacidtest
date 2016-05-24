@@ -9,11 +9,9 @@
          var msg;
       
          db.transaction(function (tx) {
-
-            tx.executeSql('DROP TABLE LOGS');
             tx.executeSql('CREATE TABLE IF NOT EXISTS LOGS (id unique, log)');
-            tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "This browser support web database.")');
-           
+            tx.executeSql('INSERT INTO LOGS (id, log) VALUES (1, "foobar")');
+            tx.executeSql('INSERT INTO LOGS (id, log) VALUES (2, "logmsg")');
             msg = '<p>Log message created and row inserted.</p>';
             document.querySelector('#status').innerHTML =  msg;
          });
@@ -36,7 +34,7 @@
    </head>
   
    <body>
-      <div id="status" name="status">Your browser does not support web database in HTML5.</div>
+      <div id="status" name="status">Status Message</div>
    </body>
   
 </html>
