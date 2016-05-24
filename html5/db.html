@@ -2,6 +2,12 @@
 <html>
 
    <head>
+      <style type="text/css">
+      img, canvas {width: 10px; height: 10px; margin: 0 1px 1px 0; padding: 0; display: block;}
+ 
+ div#scriptParent {width: 77px;}
+ 
+</style>
   
       <script type="text/javascript">
 
@@ -13,7 +19,7 @@
             
             //Basic
             document.getElementById("basic").innerHTML = "1. Passed the basic test.";
-          
+            
          
             //HTML5
                db.transaction(function (tx) {
@@ -46,13 +52,7 @@
    </head>
   
    <body>
-   
-      <script>
-        
 
-        
-      </script>
-      
 
 
 
@@ -60,7 +60,11 @@
         <h3>Basic</h3>
         <p id="basic" name="basic">1. Does not pass basic javascript.</p>     
       </div>
-      
+
+      <h3>Javascript</h3>
+    <div id="scriptParent">
+            <!--Test 2a, Script, local --><script type="text/javascript" src="localScript.js" id="localScript"></script>
+    </div>
  
 
       <div>
