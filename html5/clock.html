@@ -3,7 +3,12 @@
 <head>
 <script>
 
+var looplevel =0;
+
 function startTime() {
+    looplevel ++;
+    document.getElementById('looplevel').innerHTML = looplevel;
+
     var today = new Date();
     var h = today.getHours();
     var m = today.getMinutes();
@@ -14,7 +19,7 @@ function startTime() {
 
     document.getElementById('txt').innerHTML =
     h + ":" + m + ":" + s + ":" + ms;
-    var t = setTimeout(startTime, 10);
+    var t = setTimeout(startTime, 1000);
 }
 function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
@@ -28,6 +33,7 @@ function checkTime(i) {
 <div id="txt"></div>
 
 <p id="currenttime"></p>
+<p id="looplevel"></p>
 
 <script>
 document.getElementById("currenttime").innerHTML = Date();
