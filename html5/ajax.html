@@ -1,25 +1,54 @@
 <!DOCTYPE html>
 <html>
-<body>
+<head>
+	
+	<script>
 
-<div id="demo"><h2>Let AJAX change this text</h2></div>
 
-<!-- <button type="button" onclick="loadDoc()">Change Content</button> -->
 
-<script>
-function loadDoc() {
+
+function loadDoc(elementid) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
-      document.getElementById("demo").innerHTML = xhttp.responseText;
+      document.getElementById(elementid).innerHTML = "This is the " + elementid + " time: " + xhttp.responseText;
     }
   };
+
   xhttp.open("GET", "ajax_info.txt", true);
   xhttp.send();
 }
 
-loadDoc();
+loadDoc("first");
+var looplevel = 0;
+function startTime() {
+	looplevel ++;
+	var txt = document.getElementById("finish").innerHTML;
+	document.getElementById("finish").innerHTML = txt + looplevel + " seconds passed <br>";
+	var t = setTimeout(startTime, 1000);
+	//loadDoc("second");
+}
 
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+</head>
+
+
+<body onload="startTime()">
+
+<!-- <div id="first"><h3>Content is loading, wait in 1s</h3></div> -->
+
+<!-- <div id="second"><h3>Content is loading, wait in 1s</h3></div> -->
+
+<div id="finish"></div>
+
+
+<script>
+	
+	
 </script>
 
 </body>
