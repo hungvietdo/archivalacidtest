@@ -8,16 +8,27 @@ echo date('h:i:s') . "<br>";
 
 ?>
 
-hung
+<dir id="demo"></dir>
 
-<?php
+<script type="text/javascript">
+	
+	var delay=6000; //1 second
 
-//sleep for 5 seconds
-sleep(10);
+	var htmltext = "<?php echo 'abc'?>";
 
-//start again
-echo date('h:i:s');
-?>
+	document.addEventListener('DOMContentLoaded',function(){
+	//Test 12 setup
+	var scriptParent = document.getElementById('demo');
+	//scriptParent.innerHTML = htmltext;
+	
+});
+
+	setTimeout(function() {
+			var scriptParent = document.getElementById('demo');
+	scriptParent.innerHTML = htmltext;
+  
+}, delay);
+</script>
 
 </body>
 </html>
