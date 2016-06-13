@@ -14,15 +14,15 @@ var options_blx_54e284395b51ea741400003d_0000001 =
     minDisplayTime: 1000,
     in: {
         effect: "zoomIn",
-        delay: 125,
+        delay: 500,
         delayScale: 1,
         shuffle: true,
         reverse: false
     },
     out: {
         effect: "shake",
-        delay: 0,
-        delayScale: 1,
+        delay: 5,
+        delayScale: 5,
         shuffle: true,
         reverse: false
     }
