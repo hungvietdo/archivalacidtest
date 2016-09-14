@@ -14,6 +14,7 @@ echo "Sleep for {$seconds} seconds <br>";
 // wake up !
 echo "End time: " . date('h:i:s') . "<br>";
 
+include ('img.php');
 ?>
 
 </html>

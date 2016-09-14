@@ -5,6 +5,8 @@
 		include('delay.php');
 	?>	
 	<br><br>	
-	This is the second page.
+	<?php
+	include('img.php');
+	?>
 	</body>
 </html>
