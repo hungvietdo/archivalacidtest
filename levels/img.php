@@ -1,5 +1,10 @@
-<html>
-<body>
-	<img src="images/Old_Dominion_University_seal.png" />
-</body>
-</html>
+<?php
+
+  if (!empty($_GET['sleep'])) 
+  { 
+  	$imgSrc='createImage.php?sleep='.$_GET['sleep']; 
+  }	else {
+  	$imgSrc='createImage.php'; 
+	}
+  echo('<img src="'.$imgSrc.'"/>');
+?>
