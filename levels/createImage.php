@@ -8,9 +8,20 @@
   	$imageText .= " Total time load: ".$_GET['sleep']. " second(s)";
   }
   
-  $img=imagecreatetruecolor(500, 40); 
-  $text_color = imagecolorallocate($img, 233, 14, 91);
-  imagestring($img, 5, 15, 15, $imageText, $text_color);
-  imagepng($img);
-  imagedestroy($img);
+ 
+
+  // create a 100*30 image
+$im = imagecreate(400, 30);
+
+// white background and blue text
+$bg = imagecolorallocate($im, 255, 255, 255);
+$textcolor = imagecolorallocate($im, 0, 0, 255);
+
+// write the string at the top left
+imagestring($im, 5, 0, 0, "Passed test with ".$_GET['sleep'] ." second(s)." , $textcolor);
+
+// output the image
+header("Content-type: image/png");
+imagepng($im);
+
 ?>
