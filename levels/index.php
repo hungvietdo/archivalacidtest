@@ -33,12 +33,11 @@ function resCode($URL)
 			$i++;
     		echo "<h3>Test in ".$i." seconds:</h3>";	
 			echo "<div>";
-				
+				        $currentFolder=dirname($_SERVER['PHP_SELF']);
 					$imgSrc='createImage.php?sleep='.$i;
 					$notPass='notpass.php?sleep='.$i; 
-					$url =  dirname("http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}");
+					$url =  "http://{$_SERVER['HTTP_HOST']}{$currentFolder}";
 					$responseCode = resCode($url."/".$imgSrc);
-
 					if ($responseCode == 200)
 					{
 						echo('<img src="'.$imgSrc.'"/>');
