@@ -29,8 +29,8 @@ function resCode($URL)
 	</h1>
 		<h3>PHP test</h3>	
 	<?php 
-		for ($i = 1; $i <= 6; $i++) {
-			$i++;
+		 
+			$i = 2; //2 seconds;
     		echo "<h3>Test in ".$i." seconds:</h3>";	
 			echo "<div>";
 				        $currentFolder=dirname($_SERVER['PHP_SELF']);
@@ -45,7 +45,38 @@ function resCode($URL)
 						echo('<img src="'.$notPass.'"/>'); 
 					}
 			echo "</div>";
- 		}
+
+			$i = 4; //4 seconds;
+    		echo "<h3>Test in ".$i." seconds:</h3>";	
+			echo "<div>";
+				        $currentFolder=dirname($_SERVER['PHP_SELF']);
+					$imgSrc='createImage.php?sleep='.$i;
+					$notPass='notpass.php?sleep='.$i; 
+					$url =  "http://{$_SERVER['HTTP_HOST']}{$currentFolder}";
+					$responseCode = resCode($url."/".$imgSrc);
+					if ($responseCode == 200)
+					{
+						echo('<img src="'.$imgSrc.'"/>');
+					} else {
+						echo('<img src="'.$notPass.'"/>'); 
+					}
+			echo "</div>";
+			$i = 6; //6 seconds;
+    		echo "<h3>Test in ".$i." seconds:</h3>";	
+			echo "<div>";
+				        $currentFolder=dirname($_SERVER['PHP_SELF']);
+					$imgSrc='createImage.php?sleep='.$i;
+					$notPass='notpass.php?sleep='.$i; 
+					$url =  "http://{$_SERVER['HTTP_HOST']}{$currentFolder}";
+					$responseCode = resCode($url."/".$imgSrc);
+					if ($responseCode == 200)
+					{
+						echo('<img src="'.$imgSrc.'"/>');
+					} else {
+						echo('<img src="'.$notPass.'"/>'); 
+					}
+			echo "</div>";
+ 		 
  	?>
 		
 		<h3>JS testing<h3>
