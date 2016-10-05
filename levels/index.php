@@ -28,7 +28,6 @@ function resCode($URL)
 		Acid Test Main Page
 	</h1>
 		<h3>PHP test</h3>	
-
 	<?php 
 		for ($i = 1; $i <= 6; $i++) {
 			$i++;
