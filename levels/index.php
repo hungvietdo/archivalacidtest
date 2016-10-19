@@ -1,30 +1,31 @@
-<?php
-function resCode($URL)
-{
-    $exists = true;
-    $file_headers = @get_headers($URL);
-    $InvalidHeaders = array('200','404', '403', '500');
-
-    foreach($InvalidHeaders as $HeaderVal)
-    {
-            if(strstr($file_headers[0], $HeaderVal))
-            {
-                    return $HeaderVal;
-            }
-    }
-    return 0;
-}
-
-?>
-
 <html>
 <head>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+//$( window ).load(function() {
+$ (document).ready (function () { 
+  second = ["1","2","4","6","8"];
+  fails = 0;
+  for (i=0;i<second.length;i++) {
+  imgURL = "#img_" + second[i];
+  $(imgURL).error(function(){
+    //$(imgURL).attr("src","error.php");
+    fails++;
+  });
+  }
+})
 
+$ (window).load (function () {
+  $("#delayscore").html("Score: " + (second.length-fails) +"/"+ second.length);
+});
+
+</script>
 </head>
-    <body>
-        <h1>
-              Acid Test Main Page
-        </h1>
+<body>
+
+<h1>
+Acid Test Main Page
+  </h1>
         <h3>Delay on embbeded resource</h3>
             <?php $arrDelay = array(1,2,4,6,8);?>
             <table>
@@ -33,11 +34,12 @@ function resCode($URL)
                     <?php
                       foreach ($arrDelay as $i)
                         {
-                          echo '<img src="img.php?sleep='.$i.'" alt="" height="20" width="20">';
+                          echo '<img id="img_'.$i.'" src="img.php?sleep='.$i.'" alt="" height="20" width="20">';
                         }
                     ?>
                     </td>
                 </tr  >
             </table> 
+        <div id="delayscore">Score:</div>
     </body>
 </html>
