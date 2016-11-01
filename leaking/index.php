@@ -5,9 +5,14 @@
 //$( window ).load(function() {
 $ (document).ready (function () { 
 var protocol = "http://";
- var filename = protocol + "fa20ea2e.ngrok.io/acidtest/leaking/img.php"; 
+ var filename = protocol + "cs.odu.edu/~hdo/cs697/acidtest/leaking/img.php"; 
   $("#leakingimage").attr("src",filename);
 });
+$ (window).load (function () {
+  $("#secondimage").html();
+});
+
+
 // Assign handlers immediately after making the request,
 // and remember the jqXHR object for this request
 </script>

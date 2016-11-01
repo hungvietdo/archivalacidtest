@@ -1,7 +1,7 @@
 <?php 
 
     // create a 100*30 image
-    $im = imagecreate(20, 20);
+    $im = imagecreate(40, 40);
     sleep($_GET['sleep']);
 
     // white background and blue text
