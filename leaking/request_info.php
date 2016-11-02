@@ -5,7 +5,7 @@
 //$( window ).load(function() {
 $ (document).ready (function () { 
 var protocol = "http://";
- var filename = protocol + "cs.odu.edu/~hdo/cs697/acidtest/leaking/img1.php"; 
+ var filename = protocol + "cs.odu.edu/~hdo/cs697/acidtest/leaking/img.php"; 
   $("#leakingimage").attr("src",filename);
 });
 $ (window).load (function () {
