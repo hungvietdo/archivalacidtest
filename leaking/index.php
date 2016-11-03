@@ -1,20 +1,28 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script type="text/javascript">
 //$( window ).load(function() {
 $ (document).ready (function () { 
-var protocol = "http://";
- var filename = protocol + "cs.odu.edu/~hdo/cs697/acidtest/leaking/img1.php"; 
-  $("#leakingimage").attr("src",filename);
+ var protocol = "http://";
+ var filename = protocol + "www.cs.odu.edu/~hdo/cs697/acidtest/leaking/img.php"; 
+ $("#leakingimage").attr("src",filename);
+
 });
+
 $ (window).load (function () {
-  $("#secondimage").html();
+	var org_uri = $('#originimage')[0].src;
+	var leak_uri= $('#leakingimage')[0].src;
+	if (org_uri == leak_uri) 
+		{
+			$("#pass").html("Pass");
+		} else {
+			$("#fail").html("Failed");
+		}
 });
-
-
-// Assign handlers immediately after making the request,
-// and remember the jqXHR object for this request
 </script>
 </head>
 <body>
@@ -23,7 +31,15 @@ $ (window).load (function () {
 Acid Test Main Page
 </h1>
 
-<img id="leakingimage" src="">
+<div id="demo"></div>
+<br>
+<img id="leakingimage" src=""> <br>
+<img id="originimage" src="img.php">
+<br>
+<h3>Testing on leaking resource:
+<p class="text-primary" id="pass"></p>
+<p class="text-danger" id="fail"></p>
 
+</h3>
 </body>
 </html>

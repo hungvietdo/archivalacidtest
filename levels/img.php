@@ -6,7 +6,7 @@
 
     // white background and blue text
     $bg = imagecolorallocate($im, 26,150,65);
-    $textcolor = imagecolorallocate($im, 215,25,28);
+    $textcolor = imagecolorallocate($im, 255,237,160);
 
     // write the string at the top left
     imagestring($im, 5, 5, 2, $_GET['sleep'] , $textcolor);

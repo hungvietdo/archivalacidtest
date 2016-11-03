@@ -34,7 +34,7 @@ Acid Test Main Page
                     <?php
                       foreach ($arrDelay as $i)
                         {
-                          echo '<img id="img_'.$i.'" src="img.php?sleep='.$i.'" alt="" height="20" width="20">';
+                          echo '<img id="img_'.$i.'" src="img.php?sleep='.$i.'" alt="" height="40" width="40">';
                         }
                     ?>
                     </td>
