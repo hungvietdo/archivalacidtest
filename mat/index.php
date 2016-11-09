@@ -138,7 +138,6 @@ document.addEventListener('DOMContentLoaded',function(){
 		//console.log(err); //correct path
 	}
 	
-	
 });
 
 
@@ -272,7 +271,7 @@ document.addEventListener('DOMContentLoaded',function(){
 	test3CIFrameElement.title = "test3c";
 		
 	var scriptParent = document.getElementById('html5Parent');
-	scriptParent.appendChild(test3CIFrameElement);	
+	scriptParent.appendChild(test3CIFrameElement);
 });
 
 //Test 3f: HTML5 Multimedia
