@@ -1,15 +1,13 @@
-<meta http-equiv="Content-Security-Policy" 
+<meta http-equiv="Content-Security-Policy-Report-Only" 
 
 content="
-img-src 'self' http://www.google.com;
-script-src 'self' https://ajax.googleapis.com 'unsafe-inline';
+script-src 'self' ;
 ">
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="self_script.js"></script>
-
 </head>
 <body>
 <h1>

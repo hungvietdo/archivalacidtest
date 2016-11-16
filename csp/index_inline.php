@@ -1,9 +1,7 @@
-<meta http-equiv="Content-Security-Policy" 
-
+<meta http-equiv="Content-Security-Policy"
 content="
-img-src 'self' http://www.google.com;
-script-src https://ajax.googleapis.com 'unsafe-inline';
-
+  img-src 'self' http://www.google.com;
+  script-src https://ajax.googleapis.com 'unsafe-inline';
 ">
 <html>
 <head>
