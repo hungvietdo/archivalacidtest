@@ -62,7 +62,7 @@ $ (window).load (function () {
 
 <style type="text/css">
   img {width: 40px; height: 40px; margin: 0 1px 1px 0; padding: 0; display: block; float: left;}
-  #originimage {width: 200px; height: 40px;}
+  #originimage,#leakingimage {width: 200px; height: 40px;}
 </style>
 <link rel="stylesheet" type="text/css" href="css/1f.css" />
 </head>
@@ -215,31 +215,30 @@ $ (window).load (function () {
   <!-- Test 5-->
       <tr>
         <td>Test 5</td>
-        <td> Script, remote  </td>
+        <td> Relative image  </td>
         <td>
-          <div id="scriptParent_2b">
             <img id="originimage" src="img_leak.php" width="300">
-          </div>
         </td>
-        <td> <p id="score_test2b">1 <p></td>
+        <td> <p id="score_test5"> <p></td>
       </tr>
 
   <!-- Test -->
       <tr>
-        <td>Test 2b</td>
-        <td> Script, remote  </td>
+        <td>Test 5</td>
+        <td> Absolute url from JavaScript  </td>
         <td>
-          <div id="scriptParent_2b">
             <img id="leakingimage" src="">
-          </div>
         </td>
-        <td> <p id="score_test2b">1 <p></td>
+        <td> 
+            <div class="text-primary" id="pass"></div>
+            <div class="text-danger" id="fail"></div>
+        </td>
       </tr>
 
 
 <!-- Total score Test 2-->
       <tr class="warning">
-        <td colspan="3" class="text-right"><strong>Total score for Test 2</strong></td>
+        <td colspan="3" class="text-right"><strong>Total score for Test 5</strong></td>
         <td> <strong><p id="test2_score"> <p></strong></td>
       </tr>
     </tbody>
@@ -325,8 +324,7 @@ try{
     <br>
     <h3>Test5: Leaking resources</h3>
 
- <div class="text-primary" id="pass"></div>
-<div class="text-danger" id="fail"></div>
+
 
 </div>
 
