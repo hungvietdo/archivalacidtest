@@ -1,30 +1,45 @@
-<?php header("Content-Security-Policy: default-src 'self'; script-src 'self';");?>
+<?php header("Content-Security-Policy: img-src 'https://www.google.com'");?>
 <html>
 <head>
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script>
-//$( window ).load(function() {
-$ (document).ready (function () { 
-var protocol = "http://";
- var filename = protocol + "cs.odu.edu/~hdo/cs697/acidtest/leaking/img1.php"; 
-  $("#leakingimage").attr("src",filename);
-});
-$ (window).load (function () {
-  $("#secondimage").html();
-});
+<script type="text/javascript">
 
-
-// Assign handlers immediately after making the request,
-// and remember the jqXHR object for this request
+function myFunction()
+{
+  var filename = "img.php";
+  var leaking= "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png";
+  document.getElementById("image").src=filename;
+  document.getElementById("leakingimage").src=leaking;
+}
 </script>
+
 </head>
-<body>
-
+<body onload="myFunction()">
 <h1>
-Acid Test Main Page
+  Acid Test Main Page
 </h1>
-
-<img id="leakingimage" src="">
-
+<div>
+  Origin image
+</div>
+<div>
+  <img id="image" src="" height='50'>
+</div>
+<div>
+  Leaking image (with js)
+</div>
+<div>
+  <img id="leakingimage" src="" height='50'>
+</div>
+<div>
+  Leaking image (direct link)
+</div>
+<div>
+  <img id="leakingimage_direct" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" height='50'>
+</div>
+<script type="text/javascript">
+  var filename = "img.php";
+  var leaking= "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png";
+  document.getElementById("image").src=filename;
+  document.getElementById("leakingimage").src=leaking;
+</script>
 </body>
 </html>
