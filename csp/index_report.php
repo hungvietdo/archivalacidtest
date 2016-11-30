@@ -1,8 +1,4 @@
-<meta http-equiv="Content-Security-Policy-Report-Only" 
-
-content="
-script-src 'self' ;
-">
+<meta http-equiv="Content-Security-Policy-Report-Only" content="script-src 'self';">
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>

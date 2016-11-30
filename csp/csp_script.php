@@ -1,16 +1,12 @@
-<meta http-equiv="Content-Security-Policy"
-content="
-  img-src 'self' http://www.google.com;
-  script-src https://ajax.googleapis.com 'unsafe-inline';
-">
+<meta http-equiv="Content-Security-Policy" content=" img-src 'self';">
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript">
 
 function myFunction()
 {
-  var filename = "googlelogo_color_272x92dp.png";
+  //var filename = "googlelogo_local.png";
   var leaking= "http://www.cs.odu.edu/~hdo/cs697/acidtest/csp/googlelogo_color_272x92dp.png";
   document.getElementById("image").src=filename;
   document.getElementById("leakingimage").src=leaking;
@@ -26,7 +22,7 @@ function myFunction()
   Local image
 </div>
 <div>
-  <img id="image" src="" height='50'>
+  <img id="image" src="googlelogo_local.png" height='50'>
 </div>
 <hr>
 <div>
@@ -37,7 +33,8 @@ function myFunction()
 </div>
 <hr>
 <div>
-  Direct image (direct link)
+Direct image (direct link)<br>
+https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png
 </div>
 <div>
   <img id="leakingimage_direct" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" height='50'>
