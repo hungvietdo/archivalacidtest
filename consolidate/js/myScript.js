@@ -1,7 +1,7 @@
 //$( window ).load(function() {
 $ (document).ready (function () {
 
-  //Calculate test1 score
+  //Calculate test 1 score
   test1 = ["a","b","c","d","e","f"];
   test1_fails = 0;
   for (i=0;i<test1.length;i++) {
@@ -32,17 +32,17 @@ $ (document).ready (function () {
   }
 
   //test5: image inside script
-  var protocol = "http://";
-  var filename = protocol + "www.cs.odu.edu/~hdo/cs697/acidtest/consolidate/img_leak.php";
+  var protocol = "http://www.cs.odu.edu/~hdo/cs697/acidtest/consolidate/";
+  var filename = protocol + "img_leak.php";
   $("#leakingimage").attr("src",filename);
 
 })
 
 $ (window).load (function () {
-  $("#test1_score").html((test1.length-test1_fails) +"/"+ test1.length);
-  $("#test2_score").html("Score: " + (test2.length-test2_fails) +"/"+ test2.length);
+  $("#test1_score").html((test1.length-test1_fails) +" of "+ test1.length);
+  $("#test2_score").html((test2.length-test2_fails) +" of "+ test2.length);
 
-  $("#test4_score").html("Score: " + (test4.length-test4_fails) +"/"+ test4.length);
+  $("#test4_score").html((test4.length-test4_fails) +" of "+ test4.length);
 
   //Test5: Compare two images if they have same source.
   var org_uri = $('#originimage')[0].src;

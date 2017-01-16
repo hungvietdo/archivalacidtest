@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Check color</title>
+    <meta name="description" content="Check color">
+    <meta name="author" content="Hung Do">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="jquery.js"></script>
+</head>
+<script>
+$( document ).ready(function() {
+  if( $( "#redbox" ).css("background-color") == "rgb(255, 0, 0)" ) {
+    $("#firstbox").html("The first box is red.");
+  }
+  if( $( "#bluebox" ).css("background-color") == "rgb(0, 0, 255)" ) {
+    $("#secondbox").html("The second box is blue.");
+  }
+  
+  var src = $('#imgsource').attr('src');
+  $("#imgtext").html("The image source is: " + src);
+});
+
+</script>
+<body>
+<button id="redbox" type="button" class="btn btn-default btn-lg" style="background-color: red"></button>
+<br>
+<button id="bluebox" type="button" class="btn btn-default btn-lg" style="background-color: blue"></button>
+<br>
+<span id="firstbox"> </span>
+<br>
+<span id="secondbox"> </span>
+<br>
+<img src="pixel.png" height="42" width="42" id="imgsource">
+<br>
+<span id="imgtext"> </span>
+</body>
+</html>

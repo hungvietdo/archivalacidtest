@@ -1,139 +1,173 @@
 <!DOCTYPE html>
-<html>
-<head>
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/myScript.js"></script>
-<link rel='stylesheet' type='text/css' href='css/bootstrap.min.css'>
+<html lang="en">
 
+  <head>
+    <meta charset="utf-8">
+    <title>Acid Test for Archival Tool</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Acid Tests">
+    <meta name="author" content="Hung Do ws-dl cs odu">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="js/myScript.js"></script>
 <style type="text/css">
-  img {width: 40px; height: 40px; margin: 0 1px 1px 0; padding: 0; display: block; float: left;}
-  #originimage,#leakingimage {width: 200px; height: 40px;}
+  img {width: 20px; height: 20px; margin: 0 1px 1px 0; padding: 0; display: block; float: left;}
+  #originimage,#leakingimage {width: 200px; height: 20px;}
 </style>
 <link rel="stylesheet" type="text/css" href="css/1f.css" />
 </head>
-<body>
+  <body>
+    <div class="container">
 
-<div class="container">
-  <h2>Acid Test</h2>
-  <p>Results</p>
-  <table class="table table-bordered">
-    <thead>
-      <tr class="active">
-        <th>Test #</th>
-        <th>Description</th>
-        <th>Status</th>
-        <th>Score</th>
-      </tr>
-    </thead>
-    <tbody>
-    <?php include('tests/test1a.php')?>
-    <?php include('tests/test1b.php')?>
-    <?php include('tests/test1c.php')?>
-    <?php include('tests/test1d.php')?>
-    <?php include('tests/test1e.php')?>
-    <?php include('tests/test1f.php')?>
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="/">Acid Test</a></li>
+          <li><a href="" title="FAQ">FAQ</a></li>
+        </ul>
+        <h3 class="muted">Acid Test</h3>
+      </div>
 
-    <!-- Total score Test 1-->
-    <tr class="warning">
-      <td colspan="3" class="text-right"><strong>Total score for Test 1</strong></td>
-      <td> <strong><p id="test1_score"> <p></strong></td>
-    </tr>
-    
-    <?php include('tests/test2a.php')?>
-    <?php include('tests/test2b.php')?>
-    <?php include('tests/test2c.php')?>
+      <hr>
 
-<!-- Total score Test 2-->
-      <tr class="warning">
-        <td colspan="3" class="text-right"><strong>Total score for Test 2</strong></td>
-        <td> <strong><p id="test2_score"> <p></strong></td>
-      </tr>
+      <div class="jumbotron">
+        <h1>Acid Test for Web Archives</h1>
+        <p class="lead">Archive this page from a archival tool to get the result. </p>
+      </div>
 
+      <a href="https://github.com/hungvietdo/archivalacidtest" class="btn btn-default"><i class="fa fa-github"></i> Edit on Github</a>
+      <hr>
 
-    <?php include('tests/test4a.php')?>
+      <div class="">
+        <h2>Test 1</h2>
+        <p>Description: </p>
+        <table class="table table-bordered table-responsive table-hover">
+          <thead>
+            <tr>
+              <th>Test Name</th>
+              <th>Test Content</th>
+              <th>Status</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+              <?php include('tests/test1a.php')?>
+              <?php include('tests/test1b.php')?>
+              <?php include('tests/test1c.php')?>
+              <?php include('tests/test1d.php')?>
+              <?php include('tests/test1e.php')?>
+              <?php include('tests/test1f.php')?>
+          </tbody>
+          <tr border="0">
+              <td colspan="3" border="0" align="right"><b>Total</b></td>
+              <td><b><span id="test1_score"></span></b></td>
+          </tr>
+        </table>
+       <h2>Test 2</h2>
+        <p>Description: </p>
+        <table class="table table-bordered table-responsive table-hover">
+          <thead>
+            <tr>
+              <th>Test Name</th>
+              <th>Test Content</th>
+              <th>Status</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php include('tests/test2a.php')?>
+            <?php include('tests/test2b.php')?>
+            <?php include('tests/test2c.php')?>
+          </tbody>
+          <tr border="0">
+              <td colspan="3" border="0" align="right"><b>Total</b></td>
+              <td><b><span id="test2_score"></span></b></td>
+          </tr>
+        </table>
 
-    <?php include('tests/test5a.php')?>
+       <h2>Test 3</h2>
+        <p>Description: </p>
+        <table class="table table-bordered table-responsive table-hover">
+          <thead>
+            <tr>
+              <th>Test Name</th>
+              <th>Test Content</th>
+              <th>Status</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php include('tests/test3a.php')?>
+            <?php include('tests/test3b.php')?>
+            <?php include('tests/test3c.php')?>
+          </tbody>
+          <tr border="0">
+              <td colspan="3" border="0" align="right"><b>Total</b></td>
+              <td><b><span id="test3_score"></span></b></td>
+          </tr>
 
+        </table>
 
+      <hr>
 
+      <h2>Test 4</h2>
+        <p>Description: </p>
+        <table class="table table-bordered table-responsive table-hover">
+          <thead>
+            <tr>
+              <th>Test Name</th>
+              <th>Test Content</th>
+              <th>Status</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+              <?php include('tests/test4a.php')?>
+          </tbody>
+          <tr border="0">
+              <td colspan="3" border="0" align="right"><b>Total</b></td>
+              <td><b><span id="test4_score"></span></b></td>
+          </tr>
 
-<!-- Total score Test 2-->
-      <tr class="warning">
-        <td colspan="3" class="text-right"><strong>Total score for Test 5</strong></td>
-        <td> <strong><p id="test2_score"> <p></strong></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+        </table>
+<hr>
 
-<div id="scriptParent">
-<br>
-<h3>Test2: local, remote, and inline JavaScript</h3>
+      <h2>Test 5</h2>
+        <p>Description: </p>
+        <table class="table table-bordered table-responsive">
+          <thead>
+            <tr>
+              <th>Test Name</th>
+              <th>Test Content</th>
+              <th>Status</th>
+              <th>Score</th>
+            </tr>
+          </thead>
+          <tbody>
+              <?php include('tests/test5a.php')?>
+          </tbody>
+          <tr border="0">
+              <td colspan="3" border="0" align="right"><b>Total</b></td>
+              <td><b><span id="test5_score"></span></b></td>
+          </tr>
 
-</div>
-<h3 id="test2_score"></h3>
-</div>
+        </table>
 
-<div id="ajaxParent">
-<br>
-<h3>Test3: Ajax Tests</h3>
-<script type="text/javascript">
-//Test 3a, AJAX image replacement of content that should be in the archive
-document.addEventListener('DOMContentLoaded',function(){
-//Test 3a setup
-var test2DImageRed = new Image();
-test2DImageRed.src = "images/red.png";
-test2DImageRed.id = "test3a";
-test2DImageRed.title = "test3a";
-var scriptParent = document.getElementById('ajaxParent');
-scriptParent.appendChild(test2DImageRed);	
+      </div>
+      <h2 id="resources">Resources</h2>
+      <p>Checkout these links:</p>
+      <ul>
+        <li><a href="">Previous Project</a></li>
+        <li><a href="">Presentations / Slides</a></li>
 
-//Test 3a init AJAX
-var xhr = new XMLHttpRequest();
-xhr.open('GET','http://acid.matkelly.com/pixel.png',true);
-xhr.responseType = 'arraybuffer';
-xhr.onload = function(e) {
-document.getElementById('test3a').src = "data:image/png;base64,"+base64ArrayBuffer(e.currentTarget.response);
-};
+      </ul>
 
-xhr.send();
-});
-
-//Test 2e, AJAX requests with content that should be included in the archive, test for false positive
-// e.g. Same Origin Policy
-document.addEventListener('DOMContentLoaded',function(){
-//Test 2e setup
-var test2EImageBlue = new Image();
-test2EImageBlue.src = "pixel.png";
-test2EImageBlue.id = "test2e";
-test2EImageBlue.title = "test2e";
-var scriptParent = document.getElementById('ajaxParent');
-scriptParent.appendChild(test2EImageBlue);	
-
-//Test 10 init AJAX
-var xhr = new XMLHttpRequest();
-xhr.open('GET','http://acid.matkelly.com/pixel.png',true); 
-try{
-  xhr.responseType = 'arraybuffer';	//response type of synchronous request should not be changeable, INVALID_ACCESS_ERR: DOM Exception 15
-  xhr.onload = function(e) {
-      document.getElementById('test2e').src = "data:image/png;base64,"+base64ArrayBuffer(e.currentTarget.response);
-    };
-  xhr.send();	
-}catch(err){
-//console.log(err); //correct path
-}
-
-});
-</script>
-</div>
-<h3 id="test3_score"></h3>
-<br><br>
-
-
-<h3 id="test4_score"></h3>
-<br><br>
-
-</div>
-</body>
+      <div class="footer">
+        <p>www.ws-dl.cs.odu.edu - <a href="http://www.ws-dl.cs.odu.edu" rel="nofollow">Contact Us</a></p>
+      </div>
+    </div> <!-- /container -->
+  </body>
 </html>
+
+
+
