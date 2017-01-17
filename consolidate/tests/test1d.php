@@ -21,7 +21,7 @@
               QjU2MDBDNDNBMUYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NkM5NTM1NEMxRUJEMTFFMkFG
               MzZGQjU2MDBDNDNBMUYiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1l
               dGE+IDw/eHBhY2tldCBlbmQ9InIiPz5pvSZLAAAADklEQVR42mJmYPgPEGAAAQ8BA8CY0HcAAAAA
-              SUVORK5CYII=" title="test1d" id="test1d" />
+              SUVORK5CYII=" title="test1d" id="test1d" onerror="imgError(this);"/>
         </td>
         <td> <p id="score_test1d">1 <p></td>
       </tr>

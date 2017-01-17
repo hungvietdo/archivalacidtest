@@ -1,7 +1,8 @@
  <!-- Test 3a-->
 
 <script>
-  //TEST 3a: HTML5 Canvas drawing
+/*
+//TEST 3a: HTML5 Canvas drawing
   document.addEventListener('DOMContentLoaded',function(){
   //Test 3a setup
   var test3Acanvas = document.createElement('canvas');
@@ -18,6 +19,7 @@
   context.fillRect(0,0,10,10);
 
 });
+ */
 </script>
 
       <tr>

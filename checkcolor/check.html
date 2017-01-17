@@ -19,7 +19,13 @@ $( document ).ready(function() {
   
   var src = $('#imgsource').attr('src');
   $("#imgtext").html("The image source is: " + src);
+
+  $("#errorimg").error(function () {
+      $(this).unbind("error").attr("src", "pixel.png");
+      });
 });
+
+
 
 </script>
 <body>
@@ -34,5 +40,8 @@ $( document ).ready(function() {
 <img src="pixel.png" height="42" width="42" id="imgsource">
 <br>
 <span id="imgtext"> </span>
+<img src="pixel234.png" height="42" width="42" id="errorimg">
+<br>
+
 </body>
 </html>

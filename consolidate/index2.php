@@ -10,7 +10,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <script src="js/jquery.js"></script>
-    <script src="js/myScript.js"></script>
+    <script src="js/myScript1.js"></script>
 <style type="text/css">
   img {width: 20px; height: 20px; margin: 0 1px 1px 0; padding: 0; display: block; float: left;}
   #originimage,#leakingimage {width: 200px; height: 20px;}
@@ -154,7 +154,6 @@
           </tr>
 
         </table>
-
       </div>
       <h2 id="resources">Resources</h2>
       <p>Checkout these links:</p>
