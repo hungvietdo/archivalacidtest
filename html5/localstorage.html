@@ -1,0 +1,27 @@
+<html><head>
+        
+    </head>
+    <body>
+    <div id="status">Local Storage is </div>
+    <script type="text/javascript">
+
+function lsTest(){ 
+    var test = 'test';
+    try {
+      localStorage.setItem(test, test);
+      localStorage.removeItem(test);
+      return true;
+    } catch(e) {
+      return false;
+    }
+}
+
+var elem = document.getElementById('status');
+
+if(lsTest() === true){
+    elem.innerHTML += 'available.';
+}else{
+    elem.innerHTML += 'unavailable.';   
+}    draw();
+    </script>
+</body></html>

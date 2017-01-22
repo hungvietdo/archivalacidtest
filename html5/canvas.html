@@ -1,11 +1,20 @@
 <html><head>
-        <link rel="stylesheet" type="text/css" href="https://developer.mozilla.org/en-US/docs/Template:CustomSampleCSS?raw=1">
         
     </head>
     <body>
     <canvas id="canvas" width="300" height="200"></canvas>
 
     <script type="text/javascript">
+
+function isCanvasSupported(){
+  var elem = document.createElement('canvas');
+  return !!(elem.getContext && elem.getContext('2d'));
+}
+
+if (isCanvasSupported){
+  alert ('Html5 canvas is supported in your browser'); 
+}
+
     function draw() {
           var ctx = document.getElementById('canvas').getContext('2d');
           
