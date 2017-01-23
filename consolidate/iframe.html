@@ -1,0 +1,16 @@
+<html>
+<head>
+   <script src="js/jquery.js"></script>
+</head>
+<body>
+<iframe id="iframe" width="400" height="200" frameborder="0" sandbox="allow-scripts"></iframe>
+</body>
+<script>
+$(function(){
+    $('iframe').load(function(){
+        alert('content is ready');
+      alert(document.getElementById('iframe').contentWindow.document.body.innerHTML);
+}); 
+    $('iframe').attr('src','tests/iframesandbox.html'); //add iframe src
+});</script>
+</html>

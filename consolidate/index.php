@@ -10,7 +10,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <script src="js/jquery.js"></script>
-    <script src="js/myScript.js"></script>
+    <script src="js/arrayBuffer.js"></script>
+
 <style type="text/css">
   img {width: 20px; height: 20px; margin: 0 1px 1px 0; padding: 0; display: block; float: left;}
   #originimage,#leakingimage {width: 200px; height: 20px;}
@@ -80,6 +81,11 @@
             <?php include('tests/test2a.php')?>
             <?php include('tests/test2b.php')?>
             <?php include('tests/test2c.php')?>
+            <?php include('tests/test2d.php')?>
+            <?php include('tests/test2e.php')?>
+            <?php include('tests/test2f.php')?>
+            <?php include('tests/test2g.php')?>
+            <?php include('tests/test2h.php')?>
           </tbody>
           <tr border="0">
               <td colspan="3" border="0" align="right"><b>Total</b></td>
@@ -103,6 +109,7 @@
             <?php include('tests/test3a.php')?>
             <?php include('tests/test3b.php')?>
             <?php include('tests/test3c.php')?>
+            <?php include('tests/test3d.php')?>
           </tbody>
           <tr border="0">
               <td colspan="3" border="0" align="right"><b>Total</b></td>
@@ -154,7 +161,7 @@
           </tr>
 
         </table>
-
+    <script src="js/myScript.js"></script>
       </div>
       <h2 id="resources">Resources</h2>
       <p>Checkout these links:</p>

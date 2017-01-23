@@ -1,27 +1,58 @@
-//$( window ).load(function() {
+
+function RunAfterIFrameLoaded (){
+alert ('iframe is ready');
+//Test 3c, get iframe content
+    var iframe = document.getElementById("test_iframe");
+    var iframe_contents = iframe.contentDocument;
+
+    alert (JSON.stringify(iframe_contents, null, 4));
+
+};
+
 $ (document).ready (function () {
 
-//Test 3a, 3b
+//Test 3a, 3b, 3c
 (function(){
-  var elem = document.createElement('canvas');
-  if (!!(elem.getContext && elem.getContext('2d'))) {
-    document.getElementById('test3a').src = 'images/pixel.png';
-    document.getElementById('score_test3a').innerHTML = '1';
-  }
+    var elem = document.createElement('canvas');
+      if (!!(elem.getContext && elem.getContext('2d'))) {
+        document.getElementById('test3a').src = 'images/pixel.png';
+        document.getElementById('score_test3a').innerHTML = '1';
+      }
 
- var test = 'test';
-    try {
-      localStorage.setItem(test, test);
-      localStorage.removeItem(test);
-      document.getElementById('test3b').src = 'images/pixel.png';
-      document.getElementById('score_test3b').innerHTML = '1';
-    } catch(e) {
-      document.getElementById('test3b').src = 'images/red.png';
-      document.getElementById('score_test3b').innerHTML = '0';
-    }
-})();
+    var test = 'test';
+        try {
+          localStorage.setItem(test, test);
+          localStorage.removeItem(test);
+          document.getElementById('test3b').src = 'images/pixel.png';
+          document.getElementById('score_test3b').innerHTML = '1';
+        } catch(e) {
+          document.getElementById('test3b').src = 'images/red.png';
+          document.getElementById('score_test3b').innerHTML = '0';
+        }
 
-//Test 3b
+   var canPlay = false;
+   var v = document.createElement('video');
+   if(v.canPlayType && v.canPlayType('video/mp4').replace(/no/, '')) {
+       document.getElementById('test3d').src = 'images/pixel.png';
+       document.getElementById('score_test3d').innerHTML = '1';
+   }
+
+    $('iframe').load(function(){
+        var iframeDoc = document.getElementById('iframe').contentWindow.document;
+        if ($(iframeDoc).find('#iframetext').text() == 'New HTML5 sandbox tag') {
+          document.getElementById('test3c').src = 'images/pixel.png';
+          document.getElementById('score_test3c').innerHTML = '1';
+        }
+        //Calculate test 3 score
+          test3 = ["a","b","c","d"];
+          test3_score = 0;
+          for (i=0;i<test3.length;i++) {
+              test3_score = test3_score + Number($( "#score_test3" + test3[i]).text());
+          }
+    });
+    $('iframe').attr('src','tests/iframesandbox.html'); //add iframe src
+
+ })();
 
 
   //Calculate test 1 score
@@ -39,13 +70,6 @@ $ (document).ready (function () {
     $(imgURL).error(function(){
       test2_fails++;
     });
-  }
-
-  //Calculate test 3 score
-  test3 = ["a","b"];
-  test3_score = 0;
-  for (i=0;i<test3.length;i++) {
-      test3_score = test3_score + Number($( "#score_test3" + test3[i]).text());
   }
 
   //Create images in different in 1, 2, 4, 6, 8 seconds for test4
