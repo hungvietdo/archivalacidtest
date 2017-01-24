@@ -10,6 +10,6 @@
                     }
             ?>
         </td>
-        <td> <p id="test4_score"> <p></td>
+        <td> <p id="score_test4a"> <p></td>
       </tr>
 

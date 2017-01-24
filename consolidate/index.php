@@ -37,10 +37,13 @@
       </div>
 
       <a href="https://github.com/hungvietdo/archivalacidtest" class="btn btn-default"><i class="fa fa-github"></i> Edit on Github</a>
-      <hr>
+
+      <div id="totalscore" class=""><h2>Total Score: </h2>
+      </div>
 
 <!--This is test 1 -->
       <div class="">
+          <hr>
         <h2>Test 1</h2>
         <p>Description: </p>
         <table class="table table-bordered table-responsive table-hover">
@@ -85,7 +88,6 @@
             <?php include('tests/test2e.php')?>
             <?php include('tests/test2f.php')?>
             <?php include('tests/test2g.php')?>
-            <?php include('tests/test2h.php')?>
           </tbody>
           <tr border="0">
               <td colspan="3" border="0" align="right"><b>Total</b></td>

@@ -2,7 +2,7 @@
       <tr>
         <td>Test 3d</td>
         <td>
-            <p>HTML video tag</p>
+            <p>HTML5 video tag</p>
         </td>
         <td>
         <img src="images/red.png" title="test3d" id="test3d"/>

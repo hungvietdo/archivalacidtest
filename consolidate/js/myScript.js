@@ -63,7 +63,7 @@ $ (document).ready (function () {
   }
 
  //Calculate test 2 score
-  test2 = ["a","b","c"];
+  test2 = ["a","b","c","d","e","f","g"];
   test2_fails = 0;
   for (i=0;i<test2.length;i++) {
     imgURL = "#test2" + test2[i];
@@ -119,15 +119,32 @@ $(function() {
         $("#test1_score").html((test1_score) +" of "+ test1.length);
         $("#test2_score").html((test2.length-test2_fails) +" of "+ test2.length);
         $("#test3_score").html((test3_score) +" of "+ test3.length);
+        $("#score_test4a").html((test4.length-test4_fails) +" of "+ test4.length);
         $("#test4_score").html((test4.length-test4_fails) +" of "+ test4.length);
         //Test5: Compare two images if they have same source.
         var org_uri = $('#originimage')[0].src;
         var leak_uri= $('#leakingimage')[0].src;
         if (org_uri == leak_uri) {
             $("#pass").html("Pass");
+            $('#test5_score' ).html('1 of 1');
         } else {
             $("#fail").html("Failed");
+            $('#test5_score' ).html('0 of 1');
         }
+
+        var score = 0;
+        var totalScore = 0;
+        for (i=1;i<6;i++) {
+            mystr = $("#test" + i + "_score").text();
+            console.log(mystr);
+            myarr = mystr.split(" ");
+            score = score + parseInt(myarr[0]);
+            totalScore = totalScore + parseInt(myarr[2]);
+        };
+        console.log(score);
+        console.log(totalScore);
+        $("#totalscore").html("<h2>Total Score: " + score + "/" + totalScore + "</h2>");
+
     });
 });
 

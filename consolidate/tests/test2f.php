@@ -1,7 +1,7 @@
 <!-- Test 2f-->
       <tr>
         <td>Test 2f</td>
-        <td> AJAX image replacement of content  </td>
+        <td> Code that manipulates DOM after a certain delay (test the synchronicity of the tools)</td>
         <td>
           <div id="scriptParent_2f">
           </div>

@@ -1,7 +1,7 @@
 <!-- Test 2g-->
       <tr>
         <td>Test 2g</td>
-        <td> AJAX image replacement of content  </td>
+        <td>Code that dynamically adds stylesheets</td>
         <td>
           <div id="scriptParent_2g">
           </div>
@@ -13,7 +13,7 @@
 document.addEventListener('DOMContentLoaded',function(){
 	//Test 2j setup
 	var test2GImageRed = document.createElement('img');
-	test2GImageRed.src = "transparent_2g.png";
+	test2GImageRed.src = "images/transparent_2g.png";
 	test2GImageRed.id = "test2g";
 	test2GImageRed.title = "test2g";
 	
@@ -21,10 +21,10 @@ document.addEventListener('DOMContentLoaded',function(){
 	scriptParent.appendChild(test2GImageRed);
 	
 	var linkTag = document.createElement("link");
-	linkTag.href = "2j.css";
+	linkTag.href = "css/2g.css";
 	linkTag.rel = "stylesheet";
 	linkTag.type = "text/css";
 	
 	document.head.appendChild(linkTag);
-	
+  document.getElementById('score_test2g').innerHTML = '1';
 });</script>

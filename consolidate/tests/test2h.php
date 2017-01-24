@@ -1,12 +1,12 @@
 <!-- Test 2f-->
       <tr>
-        <td>Test 2f</td>
+        <td>Test 2h</td>
         <td> AJAX image replacement of content  </td>
         <td>
-          <div id="scriptParent_2f">
+          <div id="scriptParent_2h">
           </div>
         </td>
-        <td> <p id="score_test2f">0 <p></td>
+        <td> <p id="score_test2h">0 <p></td>
       </tr>
 <script type="text/javascript">
 // X TODO Test 2f: some code only served to certain user agents
@@ -15,15 +15,15 @@ document.addEventListener('DOMContentLoaded',function(){
 	//Test 12 setup
 	var test2FImageRed = new Image();
 	test2FImageRed.src = "images/red.png";
-	test2FImageRed.id = "test2f";
-	test2FImageRed.title = "test2f";
-	var scriptParent = document.getElementById('scriptParent_2f');
+	test2FImageRed.id = "test2h";
+	test2FImageRed.title = "test2h";
+	var scriptParent = document.getElementById('scriptParent_2h');
 	scriptParent.appendChild(test2FImageRed);
 	
 	//change image after 2 seconds
 	setTimeout(function(){
-		document.getElementById('test2f').src = "images/pixel.png";
-    document.getElementById('score_test2f').innerHTML = '1';
+		document.getElementById('test2h').src = "images/pixel.png";
+    document.getElementById('score_test2h').innerHTML = '1';
 	},2000);	
 	
 });</script>

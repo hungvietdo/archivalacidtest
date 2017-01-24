@@ -1,7 +1,7 @@
       <!-- Test 2e-->
       <tr>
         <td>Test 2e</td>
-        <td> AJAX image replacement of content  </td>
+        <td> AJAX requests with content that should be included in the archive</td>
         <td>
           <div id="scriptParent_2e">
           </div>
