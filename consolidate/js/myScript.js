@@ -122,8 +122,8 @@ $(function() {
         $("#score_test4a").html((test4.length-test4_fails) +" of "+ test4.length);
         $("#test4_score").html((test4.length-test4_fails) +" of "+ test4.length);
         //Test5: Compare two images if they have same source.
-        var org_uri = $('#originimage')[0].src;
-        var leak_uri= $('#leakingimage')[0].src;
+        var org_uri = decodeURIComponent($('#originimage')[0].src);
+        var leak_uri= decodeURIComponent($('#leakingimage')[0].src);
         console.log('org_uri'+org_uri);
         console.log('leak_uri'+leak_uri);
         if (org_uri == leak_uri) {
