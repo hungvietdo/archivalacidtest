@@ -83,9 +83,9 @@ $ (document).ready (function () {
   }
 
   //test5: image inside script
-  var protocol = "http://www.cs.odu.edu/~hdo/cs697/acidtest/consolidate/";
-  var filename = protocol + "img_leak.php";
-  $("#leakingimage").attr("src",filename);
+ var protocol = "http://";
+ var filename = protocol + "www.cs.odu.edu/~hdo/cs697/acidtest/consolidate/img_leak.php"; 
+ $("#leakingimage").attr("src",filename);
 
 })
 
@@ -124,6 +124,8 @@ $(function() {
         //Test5: Compare two images if they have same source.
         var org_uri = $('#originimage')[0].src;
         var leak_uri= $('#leakingimage')[0].src;
+        console.log('org_uri'+org_uri);
+        console.log('leak_uri'+leak_uri);
         if (org_uri == leak_uri) {
             $("#pass").html("Pass");
             $('#test5_score' ).html('1 of 1');
