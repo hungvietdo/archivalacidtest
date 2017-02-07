@@ -31,12 +31,21 @@ $ (document).ready (function () {
         }
 
    var canPlay = false;
-   var v = document.createElement('video');
-   if(v.canPlayType && v.canPlayType('video/mp4').replace(/no/, '')) {
-       document.getElementById('test3d').src = 'images/pixel.png';
-       document.getElementById('score_test3d').innerHTML = '1';
-   }
-
+	$.ajax({
+	    url:'video/movie.mp4',
+	    type:'HEAD',
+	    error: function()
+	    {
+		//file not exists
+	     	document.getElementById('score_test3d').innerHTML = '0';
+	    },
+	    success: function()
+	    {
+		//file exists
+		document.getElementById('test3d').src = 'images/pixel.png';
+	     	document.getElementById('score_test3d').innerHTML = '1';
+	    }
+	});
     $('iframe').load(function(){
         var iframeDoc = document.getElementById('iframe').contentWindow.document;
         if ($(iframeDoc).find('#iframetext').text() == 'New HTML5 sandbox tag') {
