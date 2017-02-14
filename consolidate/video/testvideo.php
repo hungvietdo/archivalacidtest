@@ -7,7 +7,7 @@
 <script>
 
 $.ajax({
-    url:'movie1.mp4',
+    url:'movie.mp4',
     type:'HEAD',
     error: function()
     {
