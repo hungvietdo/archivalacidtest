@@ -38,17 +38,20 @@ $ (document).ready (function () {
       {
         //file not exists
         document.getElementById('score_test3d').innerHTML = '0';
+        document.getElementById('video_status').innerHTML = 'Can not play the movie.';
       },
       success: function()
       {
         //file exists
         document.getElementById('test3d').src = 'images/pixel.png';
         document.getElementById('score_test3d').innerHTML = '1';
+        document.getElementById('video_status').innerHTML = 'Video courtesy of Big Buck Bunny (www.bigbuckbunny.org). ';
         var v = document.createElement('video');
         if(v.canPlayType && v.canPlayType('video/mp4').replace(/no/, '')) {
         } else {
           document.getElementById('test3d').src = 'images/red.png';
           document.getElementById('score_test3d').innerHTML = '0';
+          document.getElementById('video_status').innerHTML = 'Can not play the movie.';
         }
       }
     });
