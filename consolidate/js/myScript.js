@@ -30,28 +30,28 @@ $ (document).ready (function () {
           document.getElementById('score_test3b').innerHTML = '0';
         }
 
-   var canPlay = false;
-	$.ajax({
-	    url:'video/movie.mp4',
-	    type:'HEAD',
-	    error: function()
-	    {
-		//file not exists
-	     	document.getElementById('score_test3d').innerHTML = '0';
-	    },
-	    success: function()
-	    {
-		//file exists
-		document.getElementById('test3d').src = 'images/pixel.png';
-	     	document.getElementById('score_test3d').innerHTML = '1';
-		var v = document.createElement('video');
-		   if(v.canPlayType && v.canPlayType('video/mp4').replace(/no/, '')) {
-		   } else {
-		       document.getElementById('test3d').src = 'images/red.png';
-		       document.getElementById('score_test3d').innerHTML = '0';
-		}
-	    }
-	});
+    var canPlay = false;
+    $.ajax({
+      url:'video/movie.mp4',
+        async: false,
+      error: function()
+      {
+        //file not exists
+        document.getElementById('score_test3d').innerHTML = '0';
+      },
+      success: function()
+      {
+        //file exists
+        document.getElementById('test3d').src = 'images/pixel.png';
+        document.getElementById('score_test3d').innerHTML = '1';
+        var v = document.createElement('video');
+        if(v.canPlayType && v.canPlayType('video/mp4').replace(/no/, '')) {
+        } else {
+          document.getElementById('test3d').src = 'images/red.png';
+          document.getElementById('score_test3d').innerHTML = '0';
+        }
+      }
+    });
     $('iframe').load(function(){
         var iframeDoc = document.getElementById('iframe').contentWindow.document;
         if ($(iframeDoc).find('#iframetext').text() == 'New HTML5 sandbox tag') {

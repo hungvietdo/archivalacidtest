@@ -32,7 +32,6 @@
       <hr>
 
       <div class="jumbotron">
-        <h1>Acid Test for Web Archives</h1>
         <p class="lead">Archive this page from a archival tool to get the result. </p>
       </div>
 

@@ -3,7 +3,6 @@
 <head>
  <script src="jquery.js"></script>
 
-
 <script>
 
 $.ajax({
