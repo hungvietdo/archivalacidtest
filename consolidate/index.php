@@ -19,6 +19,7 @@
 <link rel="stylesheet" type="text/css" href="css/1f.css" />
 </head>
   <body>
+  <?php include_once('testDescriptions.php');?>
     <div class="container">
 
       <div class="masthead">
@@ -44,7 +45,7 @@
       <div class="">
           <hr>
         <h2>Test 1</h2>
-        <p>Description: </p>
+         <p><b>Description:</b> <?php echo $test1Des; ?></p>
         <table class="table table-bordered table-responsive table-hover">
           <thead>
             <tr>
@@ -69,7 +70,7 @@
         </table>
 <!--This is test 2 -->
        <h2>Test 2</h2>
-        <p>Description: </p>
+         <p><b>Description:</b> <?php echo $test2Des; ?></p>
         <table class="table table-bordered table-responsive table-hover">
           <thead>
             <tr>
@@ -96,7 +97,7 @@
 
 <!--This is test 3 -->
        <h2>Test 3</h2>
-        <p>Description: </p>
+         <p><b>Description:</b> <?php echo $test3Des; ?></p>
         <table class="table table-bordered table-responsive table-hover">
           <thead>
             <tr>
@@ -121,29 +122,24 @@
 
 <!--This is test 4 -->
       <h2>Test 4</h2>
-        <p>Description: </p>
+        <p><b>Description:</b> <?php echo $test4Des; ?></p>
         <table class="table table-bordered table-responsive table-hover">
           <thead>
             <tr>
               <th>Test Name</th>
               <th>Test Content</th>
               <th>Status</th>
-              <th>Score</th>
+              <th>Information</th>
             </tr>
           </thead>
           <tbody>
               <?php include('tests/test4a.php')?>
           </tbody>
-          <tr border="0">
-              <td colspan="3" border="0" align="right"><b>Total</b></td>
-              <td><b><span id="test4_score"></span></b></td>
-          </tr>
-
         </table>
 
 <!--This is test 5 -->
       <h2>Test 5</h2>
-        <p>Description: </p>
+         <p><b>Description:</b> <?php echo $test5Des; ?></p>
         <table class="table table-bordered table-responsive">
           <thead>
             <tr>
@@ -167,8 +163,8 @@
       <h2 id="resources">Resources</h2>
       <p>Checkout these links:</p>
       <ul>
-        <li><a href="">Previous Project</a></li>
-        <li><a href="">Presentations / Slides</a></li>
+        <li><a href="http://acid.matkelly.com/"i target="_blank">Previous Project</a></li>
+        <li><a href="http://www.cs.odu.edu/~mkelly/papers/2014_dl_acid.pdf" target="_blank">Presentations / Slides</a></li>
 
       </ul>
 

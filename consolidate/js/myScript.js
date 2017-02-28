@@ -102,7 +102,7 @@ $ (document).ready (function () {
 
   //test5: image inside script
  var protocol = "http://";
- var filename = protocol + "www.cs.odu.edu/~hdo/cs697/acidtest/consolidate/img_leak.php"; 
+ var filename = protocol + "www.cs.odu.edu/~hdo/acidtest/consolidate/img_leak.php";
  $("#leakingimage").attr("src",filename);
 
 })
@@ -137,8 +137,29 @@ $(function() {
         $("#test1_score").html((test1_score) +" of "+ test1.length);
         $("#test2_score").html((test2.length-test2_fails) +" of "+ test2.length);
         $("#test3_score").html((test3_score) +" of "+ test3.length);
-        $("#score_test4a").html((test4.length-test4_fails) +" of "+ test4.length);
-        $("#test4_score").html((test4.length-test4_fails) +" of "+ test4.length);
+
+        //Test4: Depend on how many seconds a web crawler can wait
+        totalImg = test4.length - test4_fails;
+        if (totalImg<5) {
+            switch(totalImg) {
+                  case 1:
+                        seconds = 2;
+                        break;
+                  case 2:
+                        seconds = 4;
+                        break;
+                  case 3:
+                        seconds = 5;
+                        break;
+                  case 4:
+                        seconds = 7;
+                  default:
+                        seconds = 8;
+                      }
+            $("#score_test4a").html("Can wait no more than "+ seconds + " seconds.");
+        } else {
+            $("#score_test4a").html("Can wait for more than 8 seconds.");
+        }
         //Test5: Compare two images if they have same source.
         var org_uri = decodeURIComponent($('#originimage')[0].src);
         var leak_uri= decodeURIComponent($('#leakingimage')[0].src);
@@ -155,11 +176,13 @@ $(function() {
         var score = 0;
         var totalScore = 0;
         for (i=1;i<6;i++) {
-            mystr = $("#test" + i + "_score").text();
-            console.log(mystr);
-            myarr = mystr.split(" ");
-            score = score + parseInt(myarr[0]);
-            totalScore = totalScore + parseInt(myarr[2]);
+            if (i != 4) { //ignore test4 calculation
+                mystr = $("#test" + i + "_score").text();
+                console.log(mystr);
+                myarr = mystr.split(" ");
+                score = score + parseInt(myarr[0]);
+                totalScore = totalScore + parseInt(myarr[2]);
+            }
         };
         console.log(score);
         console.log(totalScore);
