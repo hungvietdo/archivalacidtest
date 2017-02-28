@@ -18,7 +18,7 @@ This test is to measure how long an archival crawler can wait for response from 
 EOT;
 
 $test5Des = <<<EOT
-This test is design to test resource leakage in the archives.
+This test is design to test resource leakage in the archives. Two green images below should display the same time if there is no leakage from the archives.
 EOT;
 
 

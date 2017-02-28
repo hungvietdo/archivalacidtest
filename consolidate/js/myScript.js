@@ -143,22 +143,22 @@ $(function() {
         if (totalImg<5) {
             switch(totalImg) {
                   case 1:
-                        seconds = 2;
+                        seconds = 'from 1 to 2';
                         break;
                   case 2:
-                        seconds = 4;
+                        seconds = 'from 2 to 5';
                         break;
                   case 3:
-                        seconds = 5;
+                        seconds = 'from 5 to 6';
                         break;
                   case 4:
-                        seconds = 7;
+                        seconds = 'from 6 to 8';
                   default:
                         seconds = 8;
                       }
-            $("#score_test4a").html("Can wait no more than "+ seconds + " seconds.");
+            $("#score_test4a").html("Can wait "+ seconds + " seconds for response.");
         } else {
-            $("#score_test4a").html("Can wait for more than 8 seconds.");
+            $("#score_test4a").html("Can wait at least 8 seconds.");
         }
         //Test5: Compare two images if they have same source.
         var org_uri = decodeURIComponent($('#originimage')[0].src);

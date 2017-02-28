@@ -33,7 +33,7 @@
       <hr>
 
       <div class="jumbotron">
-        <p class="lead">Archive this page from a archival tool to get the result. </p>
+        <p class="lead">Archive this page from an archival tool to get the result. </p>
       </div>
 
       <a href="https://github.com/hungvietdo/archivalacidtest" class="btn btn-default"><i class="fa fa-github"></i> Edit on Github</a>
