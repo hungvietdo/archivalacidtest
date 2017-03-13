@@ -1,7 +1,6 @@
 <html>
 <head>
 <meta http-equiv="Content-Security-Policy" content=" img-src www.odu.edu">
-
 </head>
 <body>
     <div>
