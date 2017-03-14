@@ -1,9 +1,10 @@
 <?php 
-header("Content-Security-Policy: img-src www.cs.odu.edu;");
+header("Content-Security-Policy:img-src www.cs.odu.edu");
 ?>
 <html>
-<head>
 
+<head>
+<meta http-equiv="Content-Security-Policy" content=" img-src www.cs.odu.edu">
 </head>
 <body>
     <div>
