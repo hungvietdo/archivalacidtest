@@ -9,6 +9,7 @@
     <meta name="author" content="Hung Do ws-dl cs odu">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/mycss.css" rel="stylesheet">
     <script src="js/jquery.js"></script>
     <script src="js/arrayBuffer.js"></script>
 
@@ -44,8 +45,10 @@
 <!--This is test 1 -->
       <div class="">
           <hr>
+        <div class="headerDes">
         <h2>Test 1</h2>
          <p><b>Description:</b> <?php echo $test1Des; ?></p>
+        </div>
         <table class="table table-bordered table-responsive table-hover">
           <thead>
             <tr>
@@ -69,8 +72,11 @@
           </tr>
         </table>
 <!--This is test 2 -->
+
+      <div class="headerDes">
        <h2>Test 2</h2>
          <p><b>Description:</b> <?php echo $test2Des; ?></p>
+      </div>
         <table class="table table-bordered table-responsive table-hover">
           <thead>
             <tr>
@@ -96,8 +102,10 @@
         </table>
 
 <!--This is test 3 -->
+      <div class="headerDes">
        <h2>Test 3</h2>
          <p><b>Description:</b> <?php echo $test3Des; ?></p>
+      </div>
         <table class="table table-bordered table-responsive table-hover">
           <thead>
             <tr>
@@ -121,8 +129,11 @@
         </table>
 
 <!--This is test 4 -->
+
+    <div class="headerDes">
       <h2>Test 4</h2>
         <p><b>Description:</b> <?php echo $test4Des; ?></p>
+    </div>
         <table class="table table-bordered table-responsive table-hover">
           <thead>
             <tr>
@@ -138,8 +149,10 @@
         </table>
 
 <!--This is test 5 -->
+    <div class="headerDes">
       <h2>Test 5</h2>
          <p><b>Description:</b> <?php echo $test5Des; ?></p>
+    </div>
         <table class="table table-bordered table-responsive">
           <thead>
             <tr>
