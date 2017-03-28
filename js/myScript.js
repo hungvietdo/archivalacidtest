@@ -102,7 +102,7 @@ $ (document).ready (function () {
 
   //test5: image inside script
  var protocol = "http://";
- var filename = protocol + "www.cs.odu.edu/~hdo/acidtest/consolidate/img_leak.php";
+ var filename = protocol + "www.cs.odu.edu/~hdo/acidtest/img_leak.php";
  $("#leakingimage").attr("src",filename);
 
 })
