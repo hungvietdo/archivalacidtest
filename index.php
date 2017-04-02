@@ -11,6 +11,7 @@
     <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/mycss.css" rel="stylesheet">
     <script src="js/jquery.js"></script>
+    <script src="js/checkTest1.js"></script>
     <script src="js/arrayBuffer.js"></script>
 
 <style type="text/css">
@@ -176,7 +177,7 @@
       <h2 id="resources">Resources</h2>
       <p>Checkout these links:</p>
       <ul>
-        <li><a href="http://acid.matkelly.com/"i target="_blank">Previous Project</a></li>
+        <li><a href="http://acid.matkelly.com/" target="_blank">Previous Project</a></li>
         <li><a href="http://www.cs.odu.edu/~mkelly/papers/2014_dl_acid.pdf" target="_blank">Presentations / Slides</a></li>
 
       </ul>

@@ -1,14 +1,3 @@
-
-function RunAfterIFrameLoaded (){
-alert ('iframe is ready');
-//Test 3c, get iframe content
-    var iframe = document.getElementById("test_iframe");
-    var iframe_contents = iframe.contentDocument;
-
-    alert (JSON.stringify(iframe_contents, null, 4));
-
-};
-
 $ (document).ready (function () {
 
 //Test 3a, 3b, 3c
