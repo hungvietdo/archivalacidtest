@@ -3,7 +3,7 @@
         <td>Test 3d</td>
         <td>
         <p>HTML5 video tag</p>
-        <video width="100" autoplay loop>
+        <video width="100" autoplay>
           <source src="video/movie.mp4" type="video/mp4">
         </video>
         <p id="video_status">
