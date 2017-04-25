@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded',function(){
 	var scriptParent = document.getElementById('scriptParent_2f');
 	scriptParent.appendChild(test2FImageRed);
 	
-	//change image after 2 seconds
+	//change image after 5 seconds
 	setTimeout(function(){
 		document.getElementById('test2f').src = "images/pixel.png";
     document.getElementById('score_test2f').innerHTML = '1';
-	},2000);	
+	},5000);	
 	
 });</script>

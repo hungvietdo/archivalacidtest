@@ -70,7 +70,7 @@ $ (document).ready (function () {
   }
 
  //Calculate test 2 score
-  test2 = ["a","b","c","d","e","f","g"];
+  test2 = ["a","b","c","d","e","f"];
   test2_fails = 0;
   for (i=0;i<test2.length;i++) {
     imgURL = "#test2" + test2[i];
@@ -132,20 +132,20 @@ $(function() {
         if (totalImg<5) {
             switch(totalImg) {
                   case 1:
-                        seconds = 'from 1 to 2';
+                        seconds = 'for 1 second, but not for 2';
                         break;
                   case 2:
-                        seconds = 'from 2 to 5';
+                        seconds = 'for 2 seconds, but not for 4';
                         break;
                   case 3:
-                        seconds = 'from 5 to 6';
+                        seconds = 'for 4 seconds, but not for 6';
                         break;
                   case 4:
-                        seconds = 'from 6 to 8';
+                        seconds = 'for 6 seconds, but not for 8';
                   default:
                         seconds = 8;
                       }
-            $("#score_test4a").html("Can wait "+ seconds + " seconds for response.");
+            $("#score_test4a").html("Can wait response "+ seconds + " seconds.");
         } else {
             $("#score_test4a").html("Can wait at least 8 seconds.");
         }
@@ -175,7 +175,10 @@ $(function() {
         };
         console.log(score);
         console.log(totalScore);
-        $("#totalscore").html("<h2>Total Score: " + score + "/" + totalScore + "</h2>");
+	var domainName = "<font color='red'>" + location.protocol+'//'+location.hostname + "</font>";
+	var totalScoreText = "<font color='red'>" + score + "/" + totalScore + "</font>";
+	var Text = "Total score is " + totalScoreText;
+        $("#totalscore").html("<h2>"+Text+"</h2>");
 
     });
 });
